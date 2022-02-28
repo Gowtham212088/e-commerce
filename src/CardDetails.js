@@ -1,17 +1,20 @@
 import BasicRating from "./Rating"
 import Button from '@mui/material/Button';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import React from "react";
-import { arr } from "./App";
+import React, { useState } from "react";
+import { useContext } from "react";
+import { Store } from "./App";
+// import { arr } from "./App";
 
 
 
 
 
 export default function CardDetails({name,poster,summary,price,id}){
-
-         console.log(arr);
-
+ 
+   const userContext = useContext(Store)
+          console.log(userContext);
+    const [conData, setConData] = useState()
     return(
         <div className="card-details"> 
          <img src={poster} alt={name} className="img" />
@@ -34,7 +37,7 @@ export default function CardDetails({name,poster,summary,price,id}){
           size="large"
           onClick={(()=>{
 
-            arr.push({name:name,price:price,poster:poster,summary:summary, id:id})
+           setConData( userContext.cartdata.push({name:name,price:price,poster:poster,summary:summary, id:id}))
           })}
           >
           Cart item  <AddShoppingCartIcon/>
