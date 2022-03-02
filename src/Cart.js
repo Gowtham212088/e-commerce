@@ -4,36 +4,39 @@ import { arr } from "./App";
 import { useContext } from "react";
 import { Store } from "./App";
 
+export default function CartMap() {
+  const carted = useContext(Store);
+  const updatedCart = carted.cartdata;
 
-
-
-export  function CartMap() {
-  const carted =   useContext(Store);
-  const  updatedCart =  carted.cartdata;
-console.log(updatedCart)
   return (
-    <div className="cart-div">
+    <div className="cart-main-div">
       {updatedCart.map((element) => {
-        <CartItems
-          name={element.name}
-          poster={element.poster}
-          price={element.price}
-          summary={element.summary}
-        />;
+        return (
+          <CartItems
+            name={element.name}
+            poster={element.poster}
+            price={element.price}
+            summary={element.summary}
+          />
+        );
       })}
+      {/* <CartItems
+      {...updatedCart}
+      /> */}
     </div>
   );
 }
 
-export function CartItems({ name, poster, price, summary }) {
+function CartItems({ name, poster, summary, price }) {
+  console.log({ name: name, poster: poster, summary: summary, price: price });
   return (
     <div className="cart-div1">
       <div className="cart-image">
-        <img src={poster} alt={name} />
+        <img src={poster} alt={name} className="img-cart" />
       </div>
-      <div className="cart-name">{name}</div>
+      <div className="cart-name"><b>{name} </b></div> 
       <div className="cart-summary">{summary}</div>
-      <div className="art-price">{price}</div>
+      <div className="cart-price">{price}</div>
     </div>
   );
 }

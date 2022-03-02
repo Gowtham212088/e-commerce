@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import React, { useState } from "react";
 import { useContext } from "react";
-import { Store } from "./App";
+import { Store } from "./App"; // importing create context from App.js here
 // import { arr } from "./App";
 
 
@@ -12,9 +12,9 @@ import { Store } from "./App";
 
 export default function CardDetails({name,poster,summary,price,id}){
  
-   const userContext = useContext(Store)
-          console.log(userContext);
-    const [conData, setConData] = useState()
+   const userContext = useContext(Store)  // Context data
+          console.log(userContext);  // Context data
+    const [conData, setConData] = useState()  // Context data with setState.
     return(
         <div className="card-details"> 
          <img src={poster} alt={name} className="img" />

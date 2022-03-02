@@ -84,3 +84,42 @@ margin-left: 5px;
   margin-bottom: 15px;
 
 }
+
+.cart-main-div{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  gap: 15px;
+  
+}
+
+.cart-div1{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+justify-content: space-between;
+
+}
+
+.cart-div1:hover{
+cursor: pointer;
+
+}
+
+.cart-summary{
+  align-content: center;
+}
+
+.img-cart{
+  width: 345px;
+  height: 350px;
+}
+
+.cart-price{
+  position: relative;
+  top: 150px;
+  right: 195px;
+  font-size: 24px;
+  font-weight: 800;
+}
