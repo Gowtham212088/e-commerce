@@ -3,8 +3,9 @@ import React from "react";
 import DataMap from "./Card";
 import { createContext } from "react";
 import CardDetails from "./CardDetails";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import CartMap from "./Cart";
+import DenseAppBar from "./Navbar";
 
 // export var arr = [];
 export const Store = createContext();
@@ -17,11 +18,17 @@ function App() {
   // const styles = { display: "none" };
   return (
     <div className="App">
-      <Link to="/cart"> Cart </Link> <br />
-      <Link to="/products"> All products </Link> <br />
+    
+     <Store.Provider value={globalData}>
+     <DenseAppBar/>
+       </Store.Provider>
       
       <Store.Provider value={globalData}>
+
+
+
         <Switch>
+        
           <Route exact path="/products">
             {" "}
             <DataMap />{" "}
@@ -36,5 +43,11 @@ function App() {
     </div>
   );
 }
+
+
+
+
+
+
 
 export default App;

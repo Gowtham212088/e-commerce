@@ -7,10 +7,10 @@ export const data = [
     price: "₹ 36,900 ",
   },
   {
-    name: "Lenovo Legion 5 Pro",
-    poster: "https://m.media-amazon.com/images/I/71glTO3lJNL._SL1500_.jpg",
+    name: "ASUS ZenBook 13",
+    poster: "https://m.media-amazon.com/images/I/71QCFwJRjTL._SL1500_.jpg",
     summary:
-      "AMD Ryzen 7 5800H 16 Inch (40.64cm) WQXGA IPS Gaming Laptop (32GB/1TB SSD/8GB Nvidia RTX 3070 Graphics/165Hz Refresh Rate/Windows 10/Office/RGB Keyboard/Storm Grey/2.45Kg), 82JQ009DIN",
+      "OLED (2021), 13.3 (33.78 cms) FHD OLED, Intel Evo Core i5-1135G7 11th Gen, Thin and Light Laptop (8GB/512GB SSD/Windows 11/Iris Xe...",
     price: "₹ 2,15,499 ",
   },
   {

@@ -3,7 +3,8 @@ import CardDetails from "./CardDetails";
 import { arr } from "./App";
 import { useContext } from "react";
 import { Store } from "./App";
-
+import { CartInfo } from "./CartInfo";
+import Button from '@mui/material/Button';
 export default function CartMap() {
   const carted = useContext(Store);
   const updatedCart = carted.cartdata;
@@ -30,13 +31,27 @@ export default function CartMap() {
 function CartItems({ name, poster, summary, price }) {
   console.log({ name: name, poster: poster, summary: summary, price: price });
   return (
-    <div className="cart-div1">
-      <div className="cart-image">
-        <img src={poster} alt={name} className="img-cart" />
+    <div className="container my-5 mx-5">
+      {/* <div className="cart-image">
+        <img src={poster} alt={name} id="img-cart" className="img-fluid" />
       </div>
       <div className="cart-name"><b>{name} </b></div> 
       <div className="cart-summary">{summary}</div>
-      <div className="cart-price">{price}</div>
+      <div className="cart-price">{price}</div> */}
+<div className="row">
+<div className="col-md-6"> <img id="img-cart" className="img-fluid" src={poster} alt={name} /> </div>
+
+<div className="col-md-6 py-5 " id="nps">
+
+ <h3 className="px-5"> {name} </h3>
+ <h4> {price} </h4>
+ <p> {summary} </p>
+ <Button variant="contained" style={{height:"35px"}}> Buy Now</Button>
+ <Button color="error" variant="contained" style={{height:"35px", marginLeft:"35px"}}> Delete </Button>
+</div>
+
+</div>
+     
     </div>
   );
 }
