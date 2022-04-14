@@ -47,7 +47,7 @@ function CartItems({ name, poster, summary, price }) {
  <h4> {price} </h4>
  <p> {summary} </p>
  <Button variant="contained" style={{height:"35px"}}> Buy Now</Button>
- <Button color="error" variant="contained" style={{height:"35px", marginLeft:"35px"}}> Delete </Button>
+ <Button color="error" variant="contained" style={{height:"35px", marginLeft:"35px"}} > Delete </Button>
 </div>
 
 </div>

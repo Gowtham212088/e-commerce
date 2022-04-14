@@ -13,10 +13,8 @@ export default function CardDetails({name,poster,summary,price,id}){
  
    const userContext = useContext(Store)  // Context data
           console.log(userContext);  // Context data
-    const [conData, setConData] = useState(userContext)  // Context data with setState.
+    // const [conData, setConData] = useState(userContext)  // Context data with setState.
 
-
-    
     return(
         <div className="card-details"> 
  
@@ -38,12 +36,20 @@ export default function CardDetails({name,poster,summary,price,id}){
          style={{width:"35%"}}  
          variant="contained"
           size="large"
-          onClick={(()=>{
-           
-           setConData( userContext.cartdata.push({name:name,price:price,poster:poster,summary:summary, id:id}))
-          })}
+          onClick={() => {
+            userContext.setCartData([
+              ...userContext.cartdata,
+              {
+                name: name,
+                price: price,
+                poster: poster,
+                summary: summary,
+                id: id
+              }
+            ]);
+          }}
           >
-          Cart item  <AddShoppingCartIcon/>
+          Add to Cart  <AddShoppingCartIcon/>
         </Button>
 
         <Button style={{width:"30%"}}   variant="contained" size="large">

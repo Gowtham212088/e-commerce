@@ -31,12 +31,7 @@ const cartHandler = (()=>history.push("/cart")) // onClick function for CartHand
 const productsHandler = (()=>history.push("/products")) // onClick for productsHandler
 
 
-
-const [cart,setCart]=useState(cartDatas.length)
-
-const cartLeng = ()=>{setCart(cart)}
-
-console.log(cartDatas.length);
+console.log(cartDatas);
 
   return (
    
@@ -61,11 +56,10 @@ console.log(cartDatas.length);
           </Typography>
         
 
-<Button color="inherit" size='large' onClick={cartHandler}> CART {cart} </Button>
+<Button color="inherit" size='large'   onClick={cartHandler}> CART {cartDatas.length} </Button>
 
           
-        
-
+          
         </Toolbar>
       </AppBar>
     </Box>

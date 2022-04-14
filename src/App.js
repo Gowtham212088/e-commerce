@@ -6,24 +6,30 @@ import CardDetails from "./CardDetails";
 import { Switch, Route } from "react-router-dom";
 import CartMap from "./Cart";
 import DenseAppBar from "./Navbar";
-
+import { useState } from "react";
 // export var arr = [];
-export const Store = createContext();
+export const Store = createContext({cartdata:[], setCartData:()=>{}});
 
 function App() {
   // console.log(arr);
+
+const [cartdata,setCartData]=useState([])
+
   const globalData = {
-    cartdata: [],
+   cartdata, setCartData
   };
+
+ 
+
   // const styles = { display: "none" };
   return (
     <div className="App">
     
      <Store.Provider value={globalData}>
      <DenseAppBar/>
-       </Store.Provider>
+       
       
-      <Store.Provider value={globalData}>
+    
 
 
 
