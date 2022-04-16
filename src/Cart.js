@@ -40,7 +40,7 @@ const sCartD = contData.setCartData
 
   console.log({ name: name, poster: poster, summary: summary, price: price });
   return (
-    <div className="container my-5 mx-5">
+    <div id="cart" className="container my-5 mx-5">
       {/* <div className="cart-image">
         <img src={poster} alt={name} id="img-cart" className="img-fluid" />
       </div>

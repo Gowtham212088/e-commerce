@@ -1,8 +1,20 @@
-.App {
+body{
   text-align: center;
-  background-color: whitesmoke;
+  background-color:rgb(236, 236, 87);
+  background-image: url("https://www.metrilo.com/blog/wp-content/uploads/2020/05/pinterest-ecommerce-marketing-channel.png");
+
 }
 
+.App {
+  text-align: center;
+  background-color:rgb(236, 236, 87);
+  background-image: url("https://www.metrilo.com/blog/wp-content/uploads/2020/05/pinterest-ecommerce-marketing-channel.png");
+}
+
+#navbar{
+  background-image: url("https://www.metrilo.com/blog/wp-content/uploads/2020/05/pinterest-ecommerce-marketing-channel.png");
+
+}
 
 .datamap1{
   display: flex;
@@ -170,4 +182,21 @@ link,A{
 .overall-nav:nth-child(1){
   background-color: red;
   color: blue;
+}
+
+#products{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  font-weight: 900;
+  color: black;
+}
+
+#home{
+  width: 100%;
+  height: 100vh;
+background-image: url("https://www.sellbrite.com/wp-content/uploads/5-Ways-to-Use-Pinterest-to-Grow-Your-Ecommerce-Business.png");
+}
+
+#cart{
+background-color: yellow;
 }
