@@ -5,7 +5,9 @@ import { useContext } from "react";
 import { Store } from "./App";
 import { CartInfo } from "./CartInfo";
 import Button from '@mui/material/Button';
-export default function CartMap() {
+
+
+export  function CartMap() {
   const carted = useContext(Store);
   const updatedCart = carted.cartdata;
 
@@ -28,7 +30,14 @@ export default function CartMap() {
   );
 }
 
-function CartItems({ name, poster, summary, price }) {
+export function CartItems({ name, poster, summary, price }) {
+  
+const contData = useContext(Store)
+
+const cartD = contData.cartdata
+
+const sCartD = contData.setCartData
+
   console.log({ name: name, poster: poster, summary: summary, price: price });
   return (
     <div className="container my-5 mx-5">

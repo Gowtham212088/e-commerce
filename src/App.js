@@ -4,11 +4,11 @@ import DataMap from "./Card";
 import { createContext } from "react";
 import CardDetails from "./CardDetails";
 import { Switch, Route } from "react-router-dom";
-import CartMap from "./Cart";
+import {CartMap} from "./Cart";
 import DenseAppBar from "./Navbar";
 import { useState } from "react";
 // export var arr = [];
-export const Store = createContext({cartdata:[], setCartData:()=>{}});
+export const Store = createContext({cartdata:[], setCartData:()=>{}}); // Setting initial context data
 
 function App() {
   // console.log(arr);
